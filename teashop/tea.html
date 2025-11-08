@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Karthi Tea Shop</title>
+</head>
+<body>
+    <h1> KARTHI TEA SHOP</h1>
+    <script>
+        let teaShopName = "KARTHI TEA SHOP"
+        console.log(teaShopName);
+
+        let shopAddress = "Ashoknagar,chennai"
+        console.log(shopAddress);
+
+        let contact_number = "7339672373"
+        console.log(contact_number);
+        
+        let shop_category1 ={category1:"tea",category2:"coffee",category3:"snacks",category4:"juices"}
+        console.log(shop_category1.category1);
+        let tea_category = ["Ginger Tea", "Masala Tea","Lemon Tea","Cardamom Tea"];
+        console.log(tea_category);
+        let tea_prices = {gingertea:"15", masalatea:"20",lemontea:"15", cardamontea:"20"}
+        console.log(tea_prices);
+
+        let shop_category2 ={category1:"tea",category2:"coffee",category3:"snacks",category4:"juices"}
+        console.log(shop_category2.category2);
+         let coffee_category = ["Filter Coffee", "Black Coffee","Cappuccino","Normal Coffee"];
+        console.log(coffee_category);
+        let coffee_prices = {FilterCoffee:"15", BlackCoffee:"20",Cappuccino:"15", normalcoffee:"20"}
+        console.log(coffee_prices);
+
+        let shop_category3 ={category1:"tea",category2:"coffee",category3:"snacks",category4:"juices"}
+        console.log(shop_category3.category3);
+         let snacks_category = ["SaltBiscuits", "Puffs","Cup Cakes","jamBun"];
+        console.log(snacks_category);
+        let snacks_prices = {SaltBiscuits:"15", Puffs:"25",CupCakes:"18", jamBun:"20"}
+        console.log(snacks_prices);
+
+        let shop_category4 ={category1:"tea",category2:"coffee",category3:"snacks",category4:"juices"}
+        console.log(shop_category2.category4);
+        let juices_category = ["Apple","Pomegranate","WaterMelon","Orange","Milkshakes"];
+        console.log(juices_category);
+        let juices_prices = {Apple:"120", Pomegranate:"120",WaterMelon:"30", Orange:"60",Milkshakes:"100"}
+        console.log(juices_prices);
+
+        const order_menu = (odertea)=>{
+            console.log(odertea);  
+        }
+        order_menu("cus:i want tea");
+
+        const order_menu1 = (odertea)=>{
+            console.log(odertea);  
+        }
+        order_menu("waiter:sorry tea is not available");
+
+
+        let juice_available = "customer:okay i want pomegranate"
+        console.log( juice_available);
+
+        const juice_request =(order)=>{
+
+         if(order=="pomegranate"){
+
+            console.log('waiter: yes please wait 5 mins i will make the choose');
+            
+
+         }else{
+            console.log('waiter:soryy not available');
+         }}
+         juice_request("pomegranate");
+
+
+
+        // let juice_available1 = "juice is available"
+         
+        // if(juice_available1==="juice is available"){
+        //     console.log('waiter: yes please wait 5 mins i will make the choose');
+            
+        // }else{
+        //     console.log('juice is not available sorry');
+            
+        // }
+
+        const juice_ready = (juiceready)=>{
+            console.log(juiceready);  
+        }
+        juice_ready("waiter:sir your juice is ready");
+
+        const bill_amount1 = (amount)=>{
+            console.log(amount);
+            
+        }
+        bill_amount1('customer:what is the price of pomegranate juice?')
+
+
+
+
+        
+
+        const bill_amount  =()=> {
+            console.log('owner:120 sir');}
+
+            bill_amount();
+
+            const bill_method = (message)=>{
+            console.log(message);
+            
+        }
+        bill_amount1('owner:what is your payment method sir?')
+
+
+            
+
+        const payment_method =()=> {
+            console.log('customer:paytm sir');
+            
+        }
+        payment_method();
+
+        const payment_status = ()=>{
+            console.log('customer:I paid');
+            
+        }
+        payment_status();
+
+        const thankyou_customer = ()=>{
+            console.log('owner:okay thankyou sir');
+            
+        }
+        thankyou_customer();
+
+
+        
+
+        
+
+        
+
+        
+        
+
+        </script>
+        </body>
+        </html>

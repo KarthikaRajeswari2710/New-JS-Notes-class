@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>destructuring</title>
+</head>
+<body>
+    <h1>destructuring arrays and objects</h1>
+    <p id="display1"></p>
+    <p id="display2"></p>
+    <p id="display3"></p>
+    <p id="display4"></p>
+    <p id="display5"></p>
+    <p id="display6"></p>
+    <p id="display7"></p>
+    <p id="display8"></p>
+    <p id="display9"></p>
+    <p id="display10"></p>
+    <p id="display11"></p>
+    <p id="display12"></p>
+    <p id="display13"></p>
+    <p id="display14"></p>
+    <p id="display15"></p>
+    <p id="display16"></p>
+    <p id="display17"></p>
+    <p id="display18"></p>
+    <p id="display19"></p>
+    <p id="display20"></p>
+
+
+    <script>
+
+        const a = ["karthi","fullstack","25","SLA"]
+        const [name,course1,age,institute] =  a 
+        const a1 = document.getElementById("display1")
+        a1.innerHTML = `the value is ${name}`
+        
+        
+        const b = ["green","blue","pink"]
+        const [...colors] = b
+        const a2 = document.getElementById("display2")
+        a2.innerHTML = `the color is ${colors}`
+        
+
+        const c = ["laptop","dell","50,000",]
+        const [gadgets, brand, price] = c
+        const a3 = document.getElementById("display3")
+        a3.innerHTML= `the price is ${price}`
+        
+        let d = ["vivo","mobile","25000"]
+        let [...mobile]  = d
+         const a4 = document.getElementById("display4")
+        a4.innerHTML= `the gadget is ${mobile}`
+
+        let e = ["Leo","Lokesh"," 2023" ]
+        let [ title,director,year] = e
+         const a5 = document.getElementById("display5")
+        a5.innerHTML= `the director is ${director}`
+
+
+        let f = ["HTML","1 month","Beginner"]
+        let [...course] = f
+        const a6 = document.getElementById("display6")
+        a6.innerHTML=` the course detial is ${course}`
+
+
+        let g = ["lion","cat","dog"]
+        let [aa,bb,cc] = g
+        const a7 = document.getElementById("display7")
+        a7.innerHTML= `the animal is ${aa}`
+
+
+        let h= ["tiger","rabbit","bear"]
+        let [aaa,bbb,ccc] = h
+       const a8 = document.getElementById("display8")
+       a8.innerHTML = `the animal is ${ccc}`
+
+        let i= ["sparrow","finch","cuckoo"]
+        let [ab,bc,cd] = i
+        const a9 = document.getElementById("display9")
+        a9.innerHTML = `the bird is ${cd}`
+
+          let j= ["sparrow","finch","cuckoo"]
+        let [...birdsss] = j
+        const a10 = document.getElementById("display10")
+        a10.innerHTML = `the bird is ${birdsss}`
+
+
+      
+  const student = {
+  name: "Karthika",
+  age1: "25",
+  course: "Full Stack" 
+}
+const {age1} = student;
+const a11 = document.getElementById("display11")
+a11.innerHTML = `the agedetail is ${age1}`
+
+const bird1 = {bird: "parrot",color: "green"}
+const{bird,color} = bird1
+const a12= document.getElementById("display12")
+a12.innerHTML=` the bird is ${color},${bird}`
+
+const bird2 = {birdname:"peacock", color1:"blue"}
+const {color1} = bird2
+ const a13 = document.getElementById("display13")
+ a13.innerHTML= `the color name is ${color1}`
+
+
+const bird3 = {birdname1: "sparrow", color2:"brown"}
+const {birdname1}= bird3
+const a14 = document.getElementById("display14")
+ a14.innerHTML= `the name is ${birdname1}`
+
+let animal ={namel:"lion", habitat1:"grassland", color3:"golden"}
+let {habitat1} = animal
+const a15 = document.getElementById("display15")
+ a15.innerHTML= `this habitat is ${habitat1}`
+
+let animal1 = {namet:"tiger",habitat2: "forest",color4: "yellow"}
+let {color4} = animal1
+let a16 = document.getElementById("display16")
+a16.innerHTML=`this color is ${color4}`
+
+let flower = {namef:"rose",rcolor:"pink"}
+let {namef} = flower
+let a17 = document.getElementById("display17")
+a17.innerHTML=`the flower is ${namef}`
+
+let fruits = {namefruit:"apple",fruitcolor:"red"}
+let {namefruit} = fruits
+let a18 = document.getElementById("display18")
+a18.innerHTML=` the fruit is ${namefruit}`
+
+let veg = {nameveg:"carrot",vegcolor:"oragne"}
+let {nameveg} = veg
+let a19 = document.getElementById("display19")
+a19.innerHTML=` the veg is ${nameveg}`
+
+let x = {yourname:"jan",yourqualif:"b.e"}
+let {yourqualif} = x
+let a20= document.getElementById("display20")
+a20.innerHTML=` the details is ${yourqualif}`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
+
+
+
+
+        
+
+
+    </script>
+</body>
+</html>

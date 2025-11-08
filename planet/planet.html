@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Planet — Thikaline</title>
+    <link rel="stylesheet" href="planet.css">
+    
+</head>
+
+<body>
+    <section id="plannnn">
+    <div class="container">
+        <header>
+            <div class="brand">
+                
+                <div>
+                    <div style="font-weight:800">My Planet — <span style="color:var(--accent)">Thikaline</span></div>
+                   
+                </div>
+            </div>
+            <nav id="nav">
+                <a href="#home">Home</a>
+                <a href="#properties">Properties</a>
+                <a href="#sports">Sports</a>
+                <a href="#food">Food</a>
+                <a href="#dress">Dress</a>
+            </nav>
+        </header>
+
+        <div id="home" class="hero">
+            <h2>Welcome to Thikaline's Pink World</h2>
+            
+           
+        </div>
+
+        <section id="properties">
+            <h3>Properties</h3>
+            <div class="grid">
+                <div class="card">Education: Planetary School with fun lessons.</div>
+                <div class="card">Shops: Food shop, Dress shop — cute items.</div>
+                <div class="card">Sports: Soft playgrounds and friendly games.</div>
+            </div>
+        </section>
+
+        <section id="sports">
+            <h3>Sports</h3>
+            <div class="grid">
+                <div class="card">Cloud Football</div>
+                <div class="card">Glow Basketball</div>
+                <div class="card">Soft Track Races</div>
+            </div>
+        </section>
+
+        <section id="food">
+            <h3>Food Shop</h3>
+            <div class="grid">
+                <div class="card">Cotton Candy Pancakes (hover me)</div>
+                <div class="card">Galaxy Cupcakes (hover me)</div>
+                <div class="card">Bubble Tea (hover me)</div>
+            </div>
+        </section>
+
+        <section id="dress">
+            <h3>Dress Shop</h3>
+            <div class="grid">
+                <div class="card">Fairy Dress</div>
+                <div class="card">Party Skirt</div>
+                <div class="card">Cozy Jacket</div>
+            </div>
+        </section>
+
+        <footer>Made with ❤️ by Thikaline</footer>
+    </div>
+
+    <script>
+        // Simple JS: highlight current nav link while scrolling
+        const links = document.querySelectorAll('nav a');
+        const secs = Array.from(document.querySelectorAll('section, .hero')).map(el => el);
+        function highlight() {
+            const pos = window.scrollY + 120;
+            secs.forEach(s => {
+                const top = s.offsetTop;
+                const h = s.offsetHeight;
+                const id = s.id || 'home';
+                const link = document.querySelector(`nav a[href='#${id}']`);
+                if (link) {
+                    if (pos >= top && pos < top + h) link.style.background = 'rgba(255,77,158,0.12)';
+                    else link.style.background = '';
+                }
+            })
+        }
+        window.addEventListener('scroll', highlight);
+        window.addEventListener('load', highlight);
+
+        // Small click demo for food cards
+        document.querySelectorAll('#food .card').forEach((c, i) => {
+            c.addEventListener('click', () => alert(['Cotton Candy Pancakes', 'Galaxy Cupcakes', 'Bubble Tea'][i]));
+        });
+    </script>
+    </section>
+</body>
+
+</html>

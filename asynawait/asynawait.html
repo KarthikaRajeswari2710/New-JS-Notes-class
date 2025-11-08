@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+</head>
+<body>
+    <h2>Recipes list</h2>
+    <div id="pro">
+
+    </div>
+    <script>
+       const getdata = async()=>{
+
+         try{
+            console.log('fethcing datas');
+
+            const rec = await fetch("https://dummyjson.com/recipes?limit=10")
+            console.log(rec);
+
+            const data = await rec.json()
+            const datas = data.recipes;
+            const container = document.getElementById("pro")
+            
+            datas.forEach(food => {
+                const box = document.createElement("div")
+
+                box.innerHTML =`<h2>${food.id} .${food.name} </h2>`
+
+                container.appendChild(box)
+                
+            });
+ }catch(err){
+
+        console.error('Somethng error',err);
+        
+
+    }finally{
+        console.log('process compelted');
+        
+    }
+
+} 
+
+
+getdata()
+</script>
+
+</body>
+</html>

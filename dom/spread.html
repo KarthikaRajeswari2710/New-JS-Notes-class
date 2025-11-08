@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spread</title>
+</head>
+<body>
+    <h1>spread in array</h1>
+    <script>
+        const a = ["karthi","fullstack","25"]
+        const[...names]= a
+        console.log(...names);
+        
+        const b = ["green","blue","pink"]
+        const [...colors] = b
+        console.log(...colors)
+
+        const c = ["laptop","dell","50,000",]
+        const [...gadgets] = c
+        console.log(...gadgets)
+        
+        let d = ["vivo","mobile","25000"]
+        let [...mobile]  = d
+        console.log(...mobile)
+
+        let e = ["Leo","Lokesh"," 2023" ]
+        let [...title] = e
+        console.log(...title)
+
+        let f = ["HTML","1 month","Beginner"]
+        let [...course] = f
+        console.log(...course)
+
+         let g = ["lion","cat","dog"]
+        let [...animal] = g
+        console.log(...animal)
+
+         let h= ["tiger","rabbit","bear"]
+        let [...animals] = h
+        console.log(...animals)
+
+        let i= ["sparrow","finch","cuckoo"]
+        let [...birds] = i
+        console.log(...birds)
+
+        
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

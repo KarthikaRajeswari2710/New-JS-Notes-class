@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttonhideshow</title>
+
+</head>
+<body>
+    <button id="hideBtn">hide</button>
+    <script>
+        const buttonhide = document.getElementById("hideBtn");
+        buttonhide.addEventListener("click",()=>{
+         buttonhide.style.display = "none"
+        }
+    )
+ </script><br><br>
+
+<div id="box" style="width:500px;height: 500px;background-image: url(../assets/navpl.jpg);padding: 50px;"></div><br><br>
+<button id="hide">hide</button>
+<button id="show">Show</button>
+
+<script>
+  const box = document.getElementById("box");
+  const hideBtn = document.getElementById("hide");
+  const showBtn = document.getElementById("show");
+
+  hideBtn.addEventListener("click", () => {
+    box.style.display = "none";
+  });
+
+  showBtn.addEventListener("click", () => {
+    box.style.display = "block";
+  });
+</script>
+       
+    
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+
+<body>
+
+    <form id="myform"
+        style="display: flex; flex-direction: column;padding:50px;gap: 20px; justify-content: center; align-items: center;">
+
+        <label>Enter Your Name:</label>
+        <input type="text" id="username" style="width: 20%; height: 30px;" placeholder="must be CAPITAL letters">
+
+        <label>Enter your Email:</label>
+        <input type="email" id="useremail" style="width: 20%; height:30px;" placeholder="must be small letters">
+
+        <label>Enter your age:</label>
+        <input type="number" id="userage" style="width: 20%; height: 30px;" placeholder="must be above 18">
+
+        <label>Mobile number:</label>
+        <input type="tel" id="usermobile" style="width: 20%; height: 30px;" placeholder="please enter 10 digits">
+
+        <label>Enter your address:</label>
+        <textarea id="useraddress" style="width: 40%; height: 80px;"
+            placeholder="please enter your address"></textarea>
+
+        <select id="gender" name="gender" style="width: 20%; height: 30px;">
+            <option value="" disabled selected>Select your gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+
+        <button id="Btn" type="submit" style="width: 100px;height: 30px;">Submit</button>
+        <p id="para"></p>
+    </form>
+
+    <script>
+        const myform = document.getElementById("myform");
+        const para = document.getElementById("para");
+
+        myform.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const username = document.getElementById("username").value.trim();
+            const useremail = document.getElementById("useremail").value.trim();
+            const userage = document.getElementById("userage").value.trim();
+            const usermobile = document.getElementById("usermobile").value.trim();
+            const useraddress = document.getElementById("useraddress").value.trim();
+            const gender = document.getElementById("gender").value;
+
+            
+            if (!username || !useremail || !userage || !usermobile || !useraddress || !gender) {
+                para.innerText = "Please fill all fields before submitting";
+                para.style.color = "red";
+                return;
+            }
+
+           
+            const capitalCheck = /^[A-Z ]+$/;
+            if (!capitalCheck.test(username)) {
+                para.innerText = "Name must contain only CAPITAL letters";
+                para.style.color = "red";
+                return;
+            }
+
+            
+            const smallEmailCheck = /^[a-z0-9@.]+$/;
+            if (!smallEmailCheck.test(useremail)) {
+                para.innerText = "Email must contain only small letters";
+                para.style.color = "red";
+                return;
+            }
+
+            
+            if (userage < 18) {
+                para.innerText = "Age must be above 18";
+                para.style.color = "red";
+                return;
+            }
+
+            
+            const mobileCheck = /^[0-9]{10}$/;
+            if (!mobileCheck.test(usermobile)) {
+                para.innerText = "Mobile number must be exactly 10 digits";
+                para.style.color = "red";
+                return;
+            }
+
+            
+            para.innerText = "Form submitted successfully ✅";
+            para.style.color = "green";
+            alert("Successfully submitted!");
+            myform.reset();
+        });
+    </script>
+
+</body>
+
+</html>

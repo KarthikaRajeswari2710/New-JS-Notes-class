@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding:0;
+   
+}
+
+.gat{
+    
+    padding: 10px;
+    background-color:aliceblue;
+    justify-content:center;
+    align-items: center;
+
+}
+
+.gat{
+    color: black;
+    background-color: brown;
+}
+.name{
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.btnnn{
+    color: black;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}

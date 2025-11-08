@@ -1,0 +1,141 @@
+:root {
+  --pink: #ffb3d2;
+  --accent: #ff4d9e;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0
+}
+
+body {
+  background: linear-gradient(180deg, #ffe6f0, #ffd6ea);
+  color: #e3dae5;
+  padding: 24px
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  
+  
+}
+
+header {
+  display: flex;
+  background-image: url(../assets/planet.png);
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px
+  
+}
+
+.plannnn
+ {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 80px;
+}
+
+
+.brand {
+  display: flex;
+  padding:50px;
+  width: 250px;
+  align-items: center;
+  gap: 10px
+
+}
+
+.logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: white;
+  display: grid;
+  place-items: center;
+  font-weight: 700
+}
+
+nav a {
+  margin-left: 10px;
+ 
+  text-decoration: none;
+  color: #e5dde3;
+  padding: 8px;
+  border-radius: 8px
+  
+}
+
+nav a:hover {
+  background: rgba(255, 77, 158, 0.12)
+}
+
+.hero {
+  background: rgb(166, 12, 166);
+  border-radius: 12px;
+  height: 100px;
+  padding: 50px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  margin-bottom: 14px
+}
+
+section {
+  margin-bottom: 14px;
+  background: white;
+  padding: 14px;
+  border-radius: 10px
+}
+
+.grid {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap
+}
+
+.card {
+  flex: 1 1 200px;
+  padding: 12px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #fff, #fff);
+  transition: transform .25s
+}
+
+.card:hover {
+  transform: translateY(-6px)
+}
+
+.pink-badge {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: var(--pink);
+  font-weight: 700;
+  margin-top: 8px
+}
+
+footer {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 13px;
+  opacity: 0.9
+}
+
+html {
+  scroll-behavior: smooth
+}
+
+@media(max-width:600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start
+  }
+
+  nav {
+    margin-top: 8px
+  }
+}
