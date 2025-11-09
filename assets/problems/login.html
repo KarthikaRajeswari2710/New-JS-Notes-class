@@ -1,55 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>formlogin</title>
+    <link rel="stylesheet" href="login.css">
 </head>
+
 <body>
     <div>
-        <form id="myform">
+        <div class="parent" id="parent">
+            <form id="myform">
 
-            <div id="name">
-            <label >Enter your name:</label>
-            <input id="name" type="text" placeholder="enter your capital" >
-            </div>
-            <div id="mobile">
-            <label >Enter your mobile:</label>
-            <input id="mobile" type="tel" placeholder="enter your number" >
-            </div>
-            <div id="problem">
-            <label >Enter your problem:</label>
-            <textarea id="problem"></textarea>
-            </div>
-            <div id="datas">
-            <label >Where its happen in the city:</label>
-            <textarea required="problem"></textarea>
-            </div>
-            <div class="data1">
-                <label>Review the Problem:</label>
-                <textarea required id="review"></textarea>
-            </div>
-            <div class="data2">
-                <button id="btn" type="submit"
-                    style="background-color: black;color: white;height: 25px;width: 50px ;">Login</button>
-            </div>
+                <div class="name">
+                    <label>Enter your name:</label>
+                    <input id="username" type="text" placeholder="enter your name">
+                </div>
 
-            <p id="para"></p>
-        </form>
-     </div>
+                <div class="mobile">
+                    <label>Enter your mobile:</label>
+                    <input id="usermobile" type="tel" placeholder="enter your number">
+                </div>
 
-     <script>
-        const myform = document.getElementById("myform")
-        const para = document.getElementById("para")
-        myform.addEventListener
-        
+                <div class="problem">
+                    <label>Enter your problem:</label>
+                    <textarea id="userproblem" placeholder="enter your problem" style="width: 200px;height: 40px;"></textarea>
+                </div>
 
+                <div class="city">
+                    <label>Where it's happen in the city:</label>
+                    <textarea id="usercity" placeholder="Where it's happen" style="width: 200px;height: 40px;"></textarea>
+                </div>
 
+                <div class="review">
+                    <label>Review the Problem:</label>
+                    <textarea id="userreview" placeholder="Review the Problem" style="width: 200px;height: 50px;"></textarea>
+                </div>
 
+                <div class="reg">
+                    <button id="btn" type="submit"
+                        style="background-color: black;color: white;height: 25px;width: 50px;">Login</button>
+                </div>
 
+                <p id="pareee"></p>
 
+            </form>
+        </div>
+    </div>
 
-     </script>
-    
+    <script>
+        const myform = document.getElementById("myform");
+        const pareee = document.getElementById("pareee");
+
+        myform.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById("username").value.trim();
+            const mobile = document.getElementById("usermobile").value.trim();
+            const problem = document.getElementById("userproblem").value.trim();
+            const city = document.getElementById("usercity").value.trim();
+            const review = document.getElementById("userreview").value.trim();
+
+            
+            if (!name || !mobile || !problem || !city || !review) {
+                pareee.innerText = "Please fill all fields before submitting";
+                pareee.style.color = "red";
+                return;
+            }
+
+            if (mobile.length !== 10) {
+                pareee.innerText = "Mobile number must be exactly 10 digits";
+                pareee.style.color = "red";
+                return;
+            }
+
+           
+            const data = JSON.parse(localStorage.getItem("formdata")) || [];
+            
+            const storedata = {
+                name,
+                mobile,
+                problem,
+                city,
+                review
+            };
+
+            data.push(storedata);
+            localStorage.setItem("formdata", JSON.stringify(data));
+
+            alert("Successfully submitted");
+            myform.reset();
+
+         
+            window.location.href = "table.html";
+        });
+    </script>
 </body>
+
 </html>
