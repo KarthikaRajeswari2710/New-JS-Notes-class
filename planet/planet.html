@@ -1,105 +1,100 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>My Planet — Thikaline</title>
-    <link rel="stylesheet" href="planet.css">
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thikaline Planet</title>
+  <link rel="stylesheet" href="planet.css">
 </head>
-
 <body>
-    <section id="plannnn">
-    <div class="container">
-        <header>
-            <div class="brand">
-                
-                <div>
-                    <div style="font-weight:800">My Planet — <span style="color:var(--accent)">Thikaline</span></div>
-                   
-                </div>
-            </div>
-            <nav id="nav">
-                <a href="#home">Home</a>
-                <a href="#properties">Properties</a>
-                <a href="#sports">Sports</a>
-                <a href="#food">Food</a>
-                <a href="#dress">Dress</a>
-            </nav>
-        </header>
 
-        <div id="home" class="hero">
-            <h2>Welcome to Thikaline's Pink World</h2>
-            
-           
-        </div>
+ 
+  <nav class="navbar">
+    <div class="logo">Thikaline Planet</div>
+    <ul class="menu">
+      <li><a href="#studies">Studies</a></li>
+      <li><a href="#food">Food</a></li>
+      <li><a href="#dress">Dress Shop</a></li>
+    </ul>
+  </nav>
 
-        <section id="properties">
-            <h3>Properties</h3>
-            <div class="grid">
-                <div class="card">Education: Planetary School with fun lessons.</div>
-                <div class="card">Shops: Food shop, Dress shop — cute items.</div>
-                <div class="card">Sports: Soft playgrounds and friendly games.</div>
-            </div>
-        </section>
+  
+  <section class="banner">
+    <div class="banner-text">
+      <h1>Welcome to Thikaline Planet</h1>
+      <p>A new world of creativity, peace, culture and cosmic energy.</p>
+    </div>
+  </section>
 
-        <section id="sports">
-            <h3>Sports</h3>
-            <div class="grid">
-                <div class="card">Cloud Football</div>
-                <div class="card">Glow Basketball</div>
-                <div class="card">Soft Track Races</div>
-            </div>
-        </section>
-
-        <section id="food">
-            <h3>Food Shop</h3>
-            <div class="grid">
-                <div class="card">Cotton Candy Pancakes (hover me)</div>
-                <div class="card">Galaxy Cupcakes (hover me)</div>
-                <div class="card">Bubble Tea (hover me)</div>
-            </div>
-        </section>
-
-        <section id="dress">
-            <h3>Dress Shop</h3>
-            <div class="grid">
-                <div class="card">Fairy Dress</div>
-                <div class="card">Party Skirt</div>
-                <div class="card">Cozy Jacket</div>
-            </div>
-        </section>
-
-        <footer>Made with ❤️ by Thikaline</footer>
+ 
+  <h2 id="studies" class="section-title">Studies Section</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3594/3594429.png" />
+      <h3>Galaxy Learning</h3>
+      <p>Students learn with holograms and cosmic boards.</p>
     </div>
 
-    <script>
-        // Simple JS: highlight current nav link while scrolling
-        const links = document.querySelectorAll('nav a');
-        const secs = Array.from(document.querySelectorAll('section, .hero')).map(el => el);
-        function highlight() {
-            const pos = window.scrollY + 120;
-            secs.forEach(s => {
-                const top = s.offsetTop;
-                const h = s.offsetHeight;
-                const id = s.id || 'home';
-                const link = document.querySelector(`nav a[href='#${id}']`);
-                if (link) {
-                    if (pos >= top && pos < top + h) link.style.background = 'rgba(255,77,158,0.12)';
-                    else link.style.background = '';
-                }
-            })
-        }
-        window.addEventListener('scroll', highlight);
-        window.addEventListener('load', highlight);
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png" />
+      <h3>Memory Boost</h3>
+      <p>Energy crystals improve focus and creativity.</p>
+    </div>
 
-        // Small click demo for food cards
-        document.querySelectorAll('#food .card').forEach((c, i) => {
-            c.addEventListener('click', () => alert(['Cotton Candy Pancakes', 'Galaxy Cupcakes', 'Bubble Tea'][i]));
-        });
-    </script>
-    </section>
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/2361/2361400.png" />
+      <h3>Research Labs</h3>
+      <p>Cosmic experiments for future scientists.</p>
+    </div>
+  </div>
+
+  
+  <h2 id="food" class="section-title">Food Section</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" />
+      <h3>Star Meals</h3>
+      <p>Food made with glowing herbs and cosmic flavors.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/7011/7011512.png" />
+      <h3>Energy Drinks</h3>
+      <p>Boost your power with Nebula Shakes.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png" />
+      <h3>Planet Fruits</h3>
+      <p>Fresh fruits from the glowing gardens.</p>
+    </div>
+  </div>
+
+ section-title">Dress Shop</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/892/892458.png" />
+      <h3>Glow Dresses</h3>
+      <p>Soft glowing dresses for festivals.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/891/891462.png" />
+      <h3>Cosmic Suits</h3>
+      <p>Energy-protected suits for travel.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/892/892388.png" />
+      <h3>Royal Wear</h3>
+      <p>Traditional dresses of Thikaline Planet.</p>
+    </div>
+  </div>
+
+  
+  <footer>
+    © 2025 Thikaline Planet — Powered by Imagination
+  </footer>
+
 </body>
-
 </html>
